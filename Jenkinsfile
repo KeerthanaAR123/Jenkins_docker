@@ -28,7 +28,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push $keerthanaar123/jenkins_docker:$v1.0'
+                sh 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
             }
         }
 
