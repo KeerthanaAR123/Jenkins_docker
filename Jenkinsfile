@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $keerthanaar123/jenkins_docker:$v1.0 .'
+                sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG'
             }
         }
 
