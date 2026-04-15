@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "naveen04jan/my-python-app3"
-        DOCKER_TAG = "latest"
+        DOCKER_IMAGE = "keerthanaar123/jenkins_docker"
+        DOCKER_TAG = "v1.0"
     }
 
     stages {
