@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
+                sh 'docker build -t $keerthanaar123/jenkins_docker:$v1.0 .'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
+                sh 'docker push $keerthanaar123/jenkins_docker:$v1.0'
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
                 sh '''
                 docker stop myapp-container || true
                 docker rm myapp-container || true
-                docker run -d -p 5000:5000 --name myapp-container $DOCKER_IMAGE:$DOCKER_TAG
+                docker run -d -p 5000:5000 --name myapp-container $keerthanaar123/jenkins_docker:$v1.0
                 '''
             }
         }
