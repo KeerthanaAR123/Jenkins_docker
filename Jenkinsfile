@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "keerthanaar123/jenkins_docker"
-        DOCKER_TAG = "v1.0"
+        DOCKER_TAG = "latest"
     }
 
     stages {
