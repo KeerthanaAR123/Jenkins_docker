@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "keerthanaar123/jenkins_docker"
+        DOCKER_IMAGE = "keerthanaar123/my-app-image"
         DOCKER_TAG = "latest"
     }
 
